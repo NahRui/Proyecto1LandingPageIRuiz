@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  /* Brandin Fonts */
+  --rtc-primary-font: 'Lora', sans-serif;
+
+  /* Branding Colors */
+  --rtc-color-1: #eeeeee;
+  --rtc-color-2: #d9d9d9;
+  --rtc-color-3: #949494;
+  --rtc-color-4: #000000;
+  --rtc-color-5: #ffffff;
+
+  /* Background Colors */
+  --rtc-bgcolor-1: var(--rtc-color-1);
+  --rtc-bgcolor-2: var(--rtc-color-2);
+  --rtc-bgcolor-3: var(--rtc-color-3);
+  --rtc-bgcolor-4: var(--rtc-color-4);
+
+  /* Text Colors */
+  --rtc-txtcolor-1: var(--rtc-color-4);
+  --rtc-txtcolor-2: var(--rtc-color-1);
+  --rtc-txtcolor-3: var(--rtc-color-3);
+
+  /* Border Colors */
+  --rtc-bc-1: 2px solid var(--rtc-color-1);
+  --rtc-bc-2: 1px solid var(--rtc-color-4);
+
+  /* Border Radius */
+  --rtc-br-1: 15px;
+  --rtc-br-2: 8px;
+
+  /* Spacing */
+  --rtc-margin-xs: 10px;
+  --rtc-margin-s: 20px;
+  --rtc-margin-m: 30px;
+  --rtc-margin-l: 40px;
+  --rtc-margin-xl: 50px;
+
+  --rtc-padding-xs: 10px;
+  --rtc-padding-s: 20px;
+  --rtc-padding-m: 30px;
+  --rtc-padding-l: 40px;
+  --rtc-padding-xl: 50px;
+
+  --rtc-gap-xs: 10px;
+  --rtc-gap-s: 20px;
+  --rtc-gap-m: 30px;
+  --rtc-gap-l: 40px;
+  --rtc-gap-xl: 50px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--rtc-primary-font);
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p,
+label,
+button,
+div,
+section,
+article,
+main,
+header,
+footer,
+a,
+h1,
+h1,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--rtc-txtcolor-1);
+}
