@@ -12,17 +12,24 @@
       rel="canonical"
       href="https://www.mercedes-benz.es/passengercars/models.html"
     />
+    <link rel="shortcut icon" href="./asset/icono.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preload" href="style.css" as="style" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <title>Mercerdes-Benz</title>
   </head>
   <body>
-    <header>
-      <div>
-        <img src="./asset/icono.png" alt="logo mercedes" />
+    <header class="flex-container" id="header">
+      <div class="flex-container">
+        <img
+          src="./asset/icono.png"
+          alt="logo mercedes"
+          width="35"
+          height="35"
+        />
       </div>
       <nav>
-        <ul>
+        <ul class="flex-container" id="ulheader">
           <li>
             <a
               href="https://www.mercedes-benz.es/passengercars/models.html?group=all&subgroup=see-all&view=BODYTYPE"
@@ -49,10 +56,15 @@
         </ul>
       </nav>
       <aside>
-        <ul>
+        <ul class="flex-container">
           <li>
             <a href="https://id.mercedes-benz.com/ciam/auth/login">
-              <img src="./asset/usuario.png" alt="icono registro usuarios" />
+              <img
+                src="./asset/usuario.png"
+                alt="icono registro usuarios"
+                width="15"
+                height="15"
+              />
             </a>
           </li>
           <li>
@@ -62,11 +74,19 @@
               <img
                 src="./asset/cesta-de-compras-sencilla.png"
                 alt="cesta de la compra"
+                width="15"
+                height="15"
               />
             </a>
           </li>
         </ul>
       </aside>
     </header>
+    <main>
+      <section id="hero">
+        <h1>Mercedes-Benz</h1>
+        <p>Elegancia Infinita</p>
+      </section>
+    </main>
   </body>
 </html>
