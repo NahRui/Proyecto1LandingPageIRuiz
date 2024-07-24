@@ -102,6 +102,7 @@ h6 {
   right: 0;
   top: 0;
   background-color: var(--rtc-bgcolor-5);
+  z-index: 1000;
 }
 #ulheader {
   font-family: var(--rtc-secondary-font);
@@ -116,20 +117,25 @@ h6 {
   background-image: url(./asset/cabecera.png);
   min-height: 80svh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   position: relative;
+  background-color: var(--rtc-bgcolor-5);
 }
 #hero > h1 {
   font-family: var(--rtc-primary-font);
-  font-size: 60px;
+  font-size: auto;
   color: var(--rtc-txtcolor-2);
   margin-left: var(--rtc-margin-l);
+  transform: auto;
+  position: sticky;
 }
 #hero > p {
   font-family: var(--rtc-secondary-font);
-  font-size: 20px;
+  font-size: auto;
   color: var(--rtc-txtcolor-2);
   margin-left: var(--rtc-margin-l);
+  transform: auto;
+  position: sticky;
 }
 @media (max-width: 670px) {
   #header {
