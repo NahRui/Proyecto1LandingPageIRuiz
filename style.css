@@ -394,6 +394,7 @@ h6 {
 
 .scroll-box {
   flex: 0 0 300px;
+  height: 400px;
   background-color: var(--rtc-bgcolor-2);
   border: var(--rtc-bc-1);
   border-radius: var(--rtc-br-2);
@@ -408,14 +409,18 @@ h6 {
   max-width: 100%;
   height: 250px;
   object-fit: cover;
+  margin-top: auto;
   margin-bottom: var(--rtc-margin-s);
 }
 
 .scroll-box h6 {
+  position: absolute;
+  top: var(--rtc-padding-m);
+  left: var(--rtc-padding-m);
   font-family: var(--rtc-secondary-font);
   font-size: 1.2rem;
-  margin-bottom: var(--rtc-margin-s);
-  align-self: flex-start;
+  margin: 0;
+  z-index: 2;
 }
 
 .scroll-box .button-link {
