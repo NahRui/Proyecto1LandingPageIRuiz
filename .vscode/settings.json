@@ -1,0 +1,10 @@
+{
+  "window.zoomLevel": 0,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "workbench.colorTheme": "Palenight Theme",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.guides.indentation": false,
+  "indenticator.width": 0.1,
+  "editor.formatOnSave": true,
+  "indenticator.color.dark": "rgba(255, 255, 255, 0.01)"
+}
