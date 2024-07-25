@@ -95,7 +95,9 @@ h6 {
 /* Header */
 #header {
   padding: var(--rtc-padding-m);
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   position: sticky;
   left: 0;
@@ -104,41 +106,274 @@ h6 {
   background-color: var(--rtc-bgcolor-5);
   z-index: 1000;
 }
+
+#header img {
+  margin-right: var(--rtc-margin-s);
+}
+
 #ulheader {
   font-family: var(--rtc-secondary-font);
   font-size: small;
-  position: sticky;
-  margin-right: 900px;
+  display: flex;
+  gap: var(--rtc-gap-m);
+}
+
+#header nav {
+  display: flex;
+  align-items: center;
+}
+
+#header aside {
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  #header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #header nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: var(--rtc-margin-s);
+  }
+  #header aside {
+    margin-left: 0;
+    margin-top: var(--rtc-margin-s);
+  }
 }
 
 /* Hero */
 #hero {
-  padding-top: 20svh;
+  padding: var(--rtc-padding-xl) var(--rtc-padding-m);
   background-image: url(./asset/cabecera.png);
   min-height: 80svh;
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: var(--rtc-bgcolor-5);
 }
+
 #hero > h1 {
   font-family: var(--rtc-primary-font);
-  font-size: auto;
+  font-size: 4rem;
   color: var(--rtc-txtcolor-2);
-  margin-left: var(--rtc-margin-l);
-  transform: auto;
-  position: sticky;
+  margin-bottom: 0;
+  max-width: 100%;
+  line-height: 1;
 }
+
 #hero > p {
   font-family: var(--rtc-secondary-font);
-  font-size: auto;
+  font-size: 1.2rem;
   color: var(--rtc-txtcolor-2);
-  margin-left: var(--rtc-margin-l);
-  transform: auto;
-  position: sticky;
+  max-width: 100%;
+  margin-top: -0.5rem;
 }
-@media (max-width: 670px) {
-  #header {
-    height: 45svh;
+
+@media (max-width: 768px) {
+  #hero {
+    padding: var(--rtc-padding-l) var(--rtc-padding-s);
+  }
+
+  #hero > h1 {
+    font-size: 3rem;
+  }
+
+  #hero > p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero > h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Features */
+#features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--rtc-gap-l);
+  padding: var(--rtc-padding-l);
+}
+
+.feature-box {
+  width: calc(50% - var(--rtc-margin-m));
+  height: 500px;
+  margin-bottom: var(--rtc-margin-l);
+  padding: var(--rtc-padding-m);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: var(--rtc-bc-1);
+  border-radius: var(--rtc-br-1);
+  background-color: var(--rtc-bgcolor-2);
+  position: relative;
+  text-align: left;
+  padding-top: 60px;
+  overflow: hidden;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  flex-basis: calc(50% - var(--rtc-gap-l) / 2);
+}
+
+.feature-box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--rtc-margin-m);
+}
+
+.feature-box h5 {
+  position: absolute;
+  top: var(--rtc-padding-s);
+  left: var(--rtc-padding-s);
+  font-family: var(--rtc-secondary-font);
+  font-size: 1.5rem;
+  color: var(--rtc-txtcolor-1);
+  margin-bottom: var(--rtc-margin-xs);
+}
+
+.feature-box p {
+  position: absolute;
+  top: calc(var(--rtc-padding-s) + 2rem);
+  left: var(--rtc-padding-s);
+  font-family: var(--rtc-secondary-font);
+  font-size: 1rem;
+  color: var(--rtc-txtcolor-1);
+}
+
+.learn-more {
+  position: absolute;
+  bottom: var(--rtc-padding-s);
+  left: var(--rtc-padding-s);
+  display: inline-block;
+  padding: var(--rtc-padding-s) var(--rtc-padding-m);
+  background-color: var(--rtc-color-5);
+  color: var(--rtc-txtcolor-1);
+  font-family: var(--rtc-secondary-font);
+  text-decoration: none;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .feature-box {
+    flex-basis: calc(50% - var(--rtc-gap-m) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-box {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #features {
+    padding: var(--rtc-padding-m);
+  }
+
+  .feature-box {
+    margin-bottom: var(--rtc-margin-m);
+  }
+}
+
+/* Concesionarios */
+#concesionarios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  gap: var(--rtc-gap-l);
+  background-color: var(--rtc-color-5);
+}
+
+#concesionarios h2 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-family: var(--rtc-secondary-font);
+  font-size: clamp(24px, 5vw, 40px);
+  line-height: 1.2;
+  max-width: 90%;
+  margin-right: var(--rtc-margin-m);
+  margin-bottom: 0;
+  justify-self: end;
+}
+
+#concesionarios p {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  font-family: var(--rtc-secondary-font);
+  font-size: clamp(14px, 2vw, 16px);
+  max-width: 90%;
+  margin-right: var(--rtc-margin-m);
+  margin-top: -10px;
+  justify-self: end;
+}
+
+#concesionarios div {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  background-image: url(./asset/concesionarios.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10%;
+}
+
+#concesionarios article {
+  background-color: rgba(128, 128, 128, 0.7);
+  padding: var(--rtc-padding-m);
+  box-shadow: 0 0 20px rgba(128, 128, 128, 0.5);
+  border-radius: var(--rtc-br-2);
+  max-width: 90%;
+}
+
+#concesionarios h5 {
+  font-family: var(--rtc-secondary-font);
+  font-size: clamp(24px, 4vw, 36px);
+  color: var(--rtc-color-5);
+  text-align: center;
+  margin-bottom: var(--rtc-margin-m);
+}
+
+#buscador {
+  display: inline-block;
+  background-color: var(--rtc-color-5);
+  color: var(--rtc-color-4);
+  font-size: clamp(12px, 2vw, 14px);
+  text-decoration: none;
+  padding: var(--rtc-padding-s) var(--rtc-padding-m);
+  border-radius: 9999px;
+  text-align: center;
+  font-family: var(--rtc-secondary-font);
+}
+
+@media (max-width: 768px) {
+  #concesionarios {
+    grid-template-columns: 1fr;
+  }
+
+  #concesionarios h2,
+  #concesionarios p {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  #concesionarios article {
+    max-width: 80%;
   }
 }
