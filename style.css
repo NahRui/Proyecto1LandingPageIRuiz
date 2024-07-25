@@ -381,8 +381,7 @@ h6 {
 .scrollable-section {
   overflow-x: auto;
   padding: var(--rtc-padding-m);
-  background-color: var(--rtc-bgcolor-1);
-  background-color: var(--rtc-bgcolor-1);
+  background-color: var(--rtc-bgcolor-5);
   margin-bottom: 10px;
 }
 
@@ -452,4 +451,292 @@ h6 {
 .scrollable-section::-webkit-scrollbar-thumb {
   background-color: var(--rtc-color-3);
   border-radius: 20px;
+}
+
+/* Sección Maybach */
+.full-width-bg-section {
+  background-image: url(./asset/maybach.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.content-box {
+  position: absolute;
+  bottom: var(--rtc-padding-xl);
+  left: var(--rtc-padding-xl);
+  max-width: 50%;
+  padding: var(--rtc-padding-l);
+}
+
+.full-width-bg-section h5 {
+  font-family: var(--rtc-secondary-font);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--rtc-color-5);
+  margin-bottom: var(--rtc-margin-xs);
+}
+
+.full-width-bg-section p {
+  font-family: var(--rtc-secondary-font);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--rtc-color-5);
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .full-width-bg-section {
+    height: 400px;
+  }
+
+  .content-box {
+    max-width: 70%;
+    bottom: var(--rtc-padding-l);
+    left: var(--rtc-padding-l);
+  }
+}
+
+@media (max-width: 480px) {
+  .full-width-bg-section {
+    height: 300px;
+  }
+
+  .content-box {
+    max-width: 90%;
+    bottom: var(--rtc-padding-m);
+    left: var(--rtc-padding-m);
+  }
+}
+
+.image-text-section {
+  background-color: var(--rtc-color-5);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: var(--rtc-padding-xl);
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-container {
+  flex: 1;
+  padding-left: var(--rtc-padding-xl);
+}
+
+.text-container h4 {
+  font-family: var(--rtc-secondary-font);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--rtc-txtcolor-1);
+  margin-bottom: var(--rtc-margin-m);
+}
+
+.text-container p {
+  font-family: var(--rtc-secondary-font);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--rtc-txtcolor-1);
+  margin-bottom: var(--rtc-margin-m);
+}
+
+.text-container a {
+  font-family: var(--rtc-secondary-font);
+  font-size: 1rem;
+  color: var(--rtc-txtcolor-1);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .image-text-section {
+    flex-direction: column;
+  }
+
+  .text-container {
+    padding-left: 0;
+    padding-top: var(--rtc-padding-l);
+  }
+}
+
+.contact-section {
+  background-color: #333333;
+  padding: var(--rtc-padding-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-section p {
+  font-family: var(--rtc-secondary-font);
+  font-size: 1rem;
+  color: var(--rtc-color-5);
+  max-width: 70%;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.contact-button {
+  background-color: var(--rtc-color-5);
+  color: var(--rtc-txtcolor-4);
+  font-family: var(--rtc-secondary-font);
+  font-size: 0.9rem;
+  padding: var(--rtc-padding-s) var(--rtc-padding-m);
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: var(--rtc-color-2);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-section p {
+    max-width: 100%;
+    margin-bottom: var(--rtc-margin-m);
+    text-align: center;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: var(--rtc-color-4);
+  padding: var(--rtc-padding-xl) var(--rtc-padding-m);
+  text-align: center;
+}
+
+.footer h6 {
+  font-family: var(--rtc-secondary-font);
+  font-size: 0.9rem;
+  color: var(--rtc-color-5);
+  margin-bottom: var(--rtc-margin-s);
+}
+
+.footer p {
+  font-family: var(--rtc-secondary-font);
+  font-size: 0.8rem;
+  color: var(--rtc-color-5);
+  margin-bottom: var(--rtc-margin-m);
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-form input[type='email'] {
+  padding: var(--rtc-padding-xs) var(--rtc-padding-s);
+  border: none;
+  border-radius: 9999px 0 0 9999px;
+  font-family: var(--rtc-secondary-font);
+  font-size: 0.8rem;
+}
+
+.subscribe-form button {
+  padding: var(--rtc-padding-xs) var(--rtc-padding-s);
+  border: none;
+  border-radius: 0 9999px 9999px 0;
+  background-color: var(--rtc-color-5);
+  color: var(--rtc-color-4);
+  font-family: var(--rtc-secondary-font);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.privacy-policy {
+  margin-top: var(--rtc-margin-s);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.privacy-policy input[type='checkbox'] {
+  margin-right: var(--rtc-margin-xs);
+}
+
+.privacy-policy label {
+  font-family: var(--rtc-secondary-font);
+  font-size: 0.7rem;
+  color: var(--rtc-color-5);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: var(--rtc-gap-s);
+  margin-top: var(--rtc-margin-m);
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a {
+  color: var(--rtc-color-5);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--rtc-color-2);
+  opacity: 0.7;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: var(--rtc-margin-l);
+  font-family: var(--rtc-secondary-font);
+}
+
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.list-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: var(--rtc-margin-m);
+  color: var(--rtc-color-5);
+  text-transform: uppercase;
+}
+
+.footer-list li {
+  margin-bottom: var(--rtc-margin-xs);
+}
+
+.footer-list a {
+  color: var(--rtc-color-5);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: opacity 0.3s ease;
+}
+
+.footer-list a:hover {
+  opacity: 0.7;
 }
